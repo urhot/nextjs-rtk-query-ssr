@@ -1,3 +1,42 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/strict",
+    "plugin:react-hooks/recommended",
+    "next",
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "semi": [2, "always"],
+    "quotes": ["error", "single"],
+    "no-warning-comments": ["warn", { "terms": ["todo", "fixme", "xxx"] }],
+    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }],
+    "@typescript-eslint/no-var-requires": 2,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "testing-library/render-result-naming-convention": 0,
+    "jest/require-hook": 0,
+    "jest/prefer-expect-assertions": 0,
+    "jest/no-hooks": 0
+  }
 }
